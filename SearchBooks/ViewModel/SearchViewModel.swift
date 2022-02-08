@@ -22,6 +22,7 @@ final class SearchViewModel {
     func getLibrary() {
         NetworkingProvider.shared.fetchData(technology: "ios") {(library) in
             self.dataSource.append(library)
+            print(self.dataSource[0].books[0].title)
             
         } failure: { error in
             print(error.localizedDescription)
