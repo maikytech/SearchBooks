@@ -6,23 +6,32 @@
 //
 
 import Foundation
+import UIKit
 
 final class SearchViewModel {
+    
+    var activityIndicator: UIActivityIndicatorView?
     
     var refreshData = {
         () -> () in
     }
     
-    var dataSource: [Library] = [] {
+    var dataSource: [Book] = [] {
         didSet {
             refreshData()
         }
     }
     
-    func getLibrary() {
-        NetworkingProvider.shared.fetchData(technology: "ios") {(library) in
-            self.dataSource.append(library)
-            print(self.dataSource[0].books[0].title)
+    func getLibrary(technology: String, activityIndicator: UIActivityIndicatorView) {
+        NetworkingProvider.shared.fetchData(technology: technology) {(library) in
+            self.dataSource = library.books
+            self.activityIndicator = activityIndicator
+            
+            DispatchQueue.main.async {
+                activityIndicator.stopAnimating()
+            }
+            
+            print(self.dataSource)
             
         } failure: { error in
             print(error.localizedDescription)
