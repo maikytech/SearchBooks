@@ -9,7 +9,6 @@ import Foundation
 
 final class NetworkingProvider {
     
-    //MARK: - Variables
     static let shared = NetworkingProvider()
     
     func fetchData(technology: String, success: @escaping (_ library: Library) -> (), failure: @escaping (_ error: Error) -> ()) {

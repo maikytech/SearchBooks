@@ -17,6 +17,7 @@
 		6549AC1C27B20FDD00B42F19 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549AC1B27B20FDD00B42F19 /* Library.swift */; };
 		6549AC1E27B2106400B42F19 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549AC1D27B2106400B42F19 /* Book.swift */; };
 		6549AC2027B2118800B42F19 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549AC1F27B2118800B42F19 /* EndPoint.swift */; };
+		6549AC2227B215BC00B42F19 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549AC2127B215BC00B42F19 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		6549AC1B27B20FDD00B42F19 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		6549AC1D27B2106400B42F19 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		6549AC1F27B2118800B42F19 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		6549AC2127B215BC00B42F19 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		6549AC1527B20C2F00B42F19 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6549AC2127B215BC00B42F19 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				6549ABFF27B2007F00B42F19 /* ViewController.swift in Sources */,
 				6549ABFB27B2007F00B42F19 /* AppDelegate.swift in Sources */,
+				6549AC2227B215BC00B42F19 /* SearchViewModel.swift in Sources */,
 				6549AC1E27B2106400B42F19 /* Book.swift in Sources */,
 				6549AC1C27B20FDD00B42F19 /* Library.swift in Sources */,
 				6549AC1A27B20FA400B42F19 /* NetworkingProvider.swift in Sources */,
