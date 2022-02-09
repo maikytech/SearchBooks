@@ -48,11 +48,88 @@
                         <outlet property="activityIndicator" destination="8fe-4n-qF2" id="FIq-pp-VKD"/>
                         <outlet property="booksTableView" destination="mak-rH-fOi" id="RRO-ry-5KY"/>
                         <outlet property="searchBar" destination="lym-ch-A2s" id="bDJ-x3-JnF"/>
+                        <segue destination="Ppw-kf-J89" kind="show" identifier="goToBookDetail" id="tpT-V1-TKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1034.7826086956522" y="64.955357142857139"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="KIX-5Q-uFH">
+            <objects>
+                <viewController id="Ppw-kf-J89" customClass="BookDetailViewController" customModule="SearchBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iNm-hS-eRB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-vT-bYJ">
+                                <rect key="frame" x="32" y="152" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wQr-vT-bYJ" secondAttribute="height" multiplier="1:1" id="BLi-9T-qw6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lDY-lS-zRk">
+                                <rect key="frame" x="32" y="518" width="350" height="312"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24b-oD-JnF">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1s-5n-PRR">
+                                        <rect key="frame" x="0.0" y="62.5" width="350" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isbn13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-fv-THc">
+                                        <rect key="frame" x="0.0" y="125" width="350" height="62"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULM-AA-a1f">
+                                        <rect key="frame" x="0.0" y="187" width="350" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QU-1x-0fl">
+                                        <rect key="frame" x="0.0" y="249.5" width="350" height="62.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tZo-61-GGj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tZo-61-GGj" firstAttribute="trailing" secondItem="wQr-vT-bYJ" secondAttribute="trailing" constant="32" id="8Br-yx-Sik"/>
+                            <constraint firstItem="wQr-vT-bYJ" firstAttribute="top" secondItem="tZo-61-GGj" secondAttribute="top" constant="64" id="Brd-sg-RMi"/>
+                            <constraint firstItem="tZo-61-GGj" firstAttribute="trailing" secondItem="lDY-lS-zRk" secondAttribute="trailing" constant="32" id="Xha-me-Yf8"/>
+                            <constraint firstItem="lDY-lS-zRk" firstAttribute="leading" secondItem="tZo-61-GGj" secondAttribute="leading" constant="32" id="diL-sM-Fwe"/>
+                            <constraint firstItem="lDY-lS-zRk" firstAttribute="top" secondItem="wQr-vT-bYJ" secondAttribute="bottom" constant="16" id="fAZ-c3-h37"/>
+                            <constraint firstItem="wQr-vT-bYJ" firstAttribute="leading" secondItem="tZo-61-GGj" secondAttribute="leading" constant="32" id="mBY-Ac-soz"/>
+                            <constraint firstItem="tZo-61-GGj" firstAttribute="bottom" secondItem="lDY-lS-zRk" secondAttribute="bottom" constant="32" id="yq7-lQ-Rhx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jAz-EP-Hso"/>
+                    <connections>
+                        <outlet property="bookImageView" destination="wQr-vT-bYJ" id="wVZ-Bu-mx5"/>
+                        <outlet property="isbnLabel" destination="n4M-fv-THc" id="8OZ-S6-rSv"/>
+                        <outlet property="priceLabel" destination="1QU-1x-0fl" id="Qjg-ce-PbV"/>
+                        <outlet property="subtitleLabel" destination="T1s-5n-PRR" id="GIB-YB-auM"/>
+                        <outlet property="titleLabel" destination="24b-oD-JnF" id="hTr-HN-NBv"/>
+                        <outlet property="urlBookLabel" destination="ULM-AA-a1f" id="VVF-6D-bLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsk-Qr-aVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="64.955357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OtF-GM-Zs3">

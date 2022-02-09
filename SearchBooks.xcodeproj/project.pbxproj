@@ -20,6 +20,7 @@
 		6549AC2227B215BC00B42F19 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549AC2127B215BC00B42F19 /* SearchViewModel.swift */; };
 		65901D9127B2D3300017481C /* BooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65901D8F27B2D3300017481C /* BooksTableViewCell.swift */; };
 		65901D9227B2D3300017481C /* BooksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65901D9027B2D3300017481C /* BooksTableViewCell.xib */; };
+		65901D9627B32E1B0017481C /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65901D9527B32E1B0017481C /* BookDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6549AC2127B215BC00B42F19 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		65901D8F27B2D3300017481C /* BooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCell.swift; sourceTree = "<group>"; };
 		65901D9027B2D3300017481C /* BooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksTableViewCell.xib; sourceTree = "<group>"; };
+		65901D9527B32E1B0017481C /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				6549ABFE27B2007F00B42F19 /* ViewController.swift */,
+				65901D9527B32E1B0017481C /* BookDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				6549ABFB27B2007F00B42F19 /* AppDelegate.swift in Sources */,
 				6549AC2227B215BC00B42F19 /* SearchViewModel.swift in Sources */,
 				65901D9127B2D3300017481C /* BooksTableViewCell.swift in Sources */,
+				65901D9627B32E1B0017481C /* BookDetailViewController.swift in Sources */,
 				6549AC1E27B2106400B42F19 /* Book.swift in Sources */,
 				6549AC1C27B20FDD00B42F19 /* Library.swift in Sources */,
 				6549AC1A27B20FA400B42F19 /* NetworkingProvider.swift in Sources */,

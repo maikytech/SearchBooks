@@ -47,6 +47,29 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToBookDetail" {
+            if let destiny = segue.destination as? BookDetailViewController {
+                if let index = sender as? Int {
+                    let tittle = viewModel.dataSource[index].title
+                    let subtitle = viewModel.dataSource[index].subtitle
+                    let isbn13 = viewModel.dataSource[index].isbn13
+                    let price = viewModel.dataSource[index].price
+                    let url = viewModel.dataSource[index].url
+                    let image = viewModel.dataSource[index].image
+                    destiny.tittle = tittle
+                    destiny.subtitle = subtitle
+                    destiny.isbn13 = isbn13
+                    destiny.price = price
+                    destiny.url = url
+                    destiny.image = image
+                    
+                }
+            }
+            
+        }
+    }
 
 }
 
@@ -72,6 +95,9 @@ extension ViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToBookDetail", sender: indexPath.row)
+    }
     
 }
 
