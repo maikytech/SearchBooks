@@ -31,8 +31,6 @@ final class SearchViewModel {
                 activityIndicator.stopAnimating()
             }
             
-            print(self.dataSource)
-            
         } failure: { error in
             print(error.localizedDescription)
         }
