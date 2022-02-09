@@ -15,7 +15,6 @@ final class NetworkingProvider {
         let url: String = "\(EndPoint.domain)\(EndPoint.search)\(technology)"
         
         guard let objectUrl = URL(string: url) else {
-            print("url error")
             return
         }
         
@@ -29,10 +28,9 @@ final class NetworkingProvider {
             do {
                 let decoder = try JSONDecoder().decode(Library.self, from: data)
                 success(decoder)
-                print("success")
+                
             } catch let error {
                 failure (error)
-                print("failure")
                 print(error.localizedDescription)
             }
         }.resume()

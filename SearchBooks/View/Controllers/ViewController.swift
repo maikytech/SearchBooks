@@ -25,8 +25,6 @@ class ViewController: UIViewController {
         
         setupView()
         bind()
-        
-        //viewModel.getLibrary()
     }
     
     //MARK: - Private Methods
@@ -37,7 +35,6 @@ class ViewController: UIViewController {
         searchBar.delegate = self
         booksTableView.delegate = self
         booksTableView.dataSource = self
-        booksTableView.backgroundColor = .red
         booksTableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
     }
     
@@ -65,13 +62,11 @@ class ViewController: UIViewController {
                     destiny.price = price
                     destiny.url = url
                     destiny.image = image
-                    
                 }
             }
             
         }
     }
-
 }
 
 //MARK: - UITableViewDataSource

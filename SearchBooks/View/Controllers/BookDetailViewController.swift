@@ -18,7 +18,6 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var urlBookLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    
     //MARK: - Variables
     var tittle: String?
     var subtitle: String?
@@ -32,7 +31,6 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-
     }
     
     //MARK:- Private Methods
@@ -41,9 +39,11 @@ class BookDetailViewController: UIViewController {
             bookImageView.kf.setImage(with: URL(string: image))
         }
         
+        if let isbn13 = isbn13 {
+            isbnLabel.text = "ISBN13: \(isbn13)"
+        }
         titleLabel.text = tittle
         subtitleLabel.text = subtitle
-        isbnLabel.text = isbn13
         urlBookLabel.text = url
         priceLabel.text = price
     }
