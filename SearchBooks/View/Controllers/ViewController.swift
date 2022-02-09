@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     
@@ -86,6 +87,7 @@ extension ViewController: UITableViewDataSource {
         
         if let cell = cell as? BooksTableViewCell {
             cell.bookLabel.text = object.title
+            cell.bookImageView.kf.setImage(with: URL(string: object.image))
         }
         
         return cell

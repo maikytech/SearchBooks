@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BookDetailViewController: UIViewController {
     
@@ -36,15 +37,14 @@ class BookDetailViewController: UIViewController {
     
     //MARK:- Private Methods
     private func setupView() {
+        if let image = image {
+            bookImageView.kf.setImage(with: URL(string: image))
+        }
+        
         titleLabel.text = tittle
         subtitleLabel.text = subtitle
         isbnLabel.text = isbn13
         urlBookLabel.text = url
         priceLabel.text = price
-        
     }
-    
-
-    
-
 }
